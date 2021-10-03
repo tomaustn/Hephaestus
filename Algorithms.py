@@ -84,7 +84,7 @@ def airQualityCheck():
         (aqi.POLLUTANT_PM10, "24"),
         (aqi.POLLUTANT_O3_8H, "0.087")  
     ])
-    print(myaqi2)
+    return(myaqi2)
 
 
 # Returns temperature changed - change current and previous temp to nasa data list - tbd
