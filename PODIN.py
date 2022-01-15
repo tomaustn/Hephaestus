@@ -48,14 +48,15 @@ def random_value(dataset):
     return value
 
 
-class PotentialDanger:
+class PODIN:
 
     MIN = 80
     MAX = 126
 
     @staticmethod
     def index(heatindex, uvrindex, pollutionindex):
-        """ Uses weights to determine the Potential Danger Index """
+        """ Uses weights to determine PODIN """
+
         return (heatindex*4 + uvrindex + pollutionindex*2)/700
 
 
@@ -91,4 +92,4 @@ if __name__ == '__main__':
     temperature = random_value(get_datset("temperature", date))
     humidity = random_value(get_datset("humidity", date))
 
-    heatindex = PotentialDanger.heatIndex(temperature, humidity)
+    heatindex = PODIN.heatIndex(temperature, humidity)
